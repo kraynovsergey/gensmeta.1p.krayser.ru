@@ -1,0 +1,109 @@
+@use '../global/functions' as *;
+
+.intro {
+    overflow: hidden;
+
+    &__content {
+        position: relative;
+        padding: fluid(140px, 30px) 0 fluid(30px, 20px);
+
+        @include mobile {
+            padding-bottom: 0;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        @include fluid-text(150px, 40px);
+        line-height: 80%;
+        letter-spacing: 0.02em;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: var(--second-family);
+        padding: 0;
+        gap: fluid(47px, 20px);
+        margin: 0 0 fluid(37px, 20px);
+
+        & span {
+            display: flex;
+
+            &:last-child {
+                align-self: flex-end;
+
+                @include mobile-from {
+                    width: 70%;
+                }
+            }
+
+            &:first-child {
+                @include mobile {
+                    align-items: center;
+                    gap: 10px;
+
+                    &::after {
+                        content: '';
+                        width: 40px;
+                        height: 5px;
+                        background-color: var(--color-black);
+                    }
+                }
+            }
+        }
+    }
+
+    &__subheading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+        @include fluid-text(30px, 20px);
+        line-height: 110%;
+
+        & span {
+            @include mobile-from {
+                width: 70%;
+            }
+        }
+
+        &::after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg width='257' height='31' viewBox='0 0 257 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40.3297 7.59096C78.8121 2.53831 160.595 -1.04861 216.744 5.18697' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M2 28.5908C57.2975 24.0631 185.314 17.7242 255 28.5908' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            align-self: flex-end;
+            width: fluid(257px, 100px);
+            aspect-ratio: 257/31;
+            display: flex;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__building {
+        position: absolute;
+        right: 0;
+        top: -13%;
+        width: 30%;
+        height: auto;
+
+        @include tablet {
+            width: 28%;
+            top: -9%;
+        }
+
+        @include tablet-small {
+            width: 21%;
+            top: -1%;
+        }
+    }
+
+    &__folder {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 25%;
+        height: auto;
+    }
+}

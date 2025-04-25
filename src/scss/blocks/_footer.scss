@@ -1,0 +1,21 @@
+@use '../global/functions' as *;
+
+.footer {
+    padding: 30px 0 fluid(100px, 30px);
+
+    &__container {
+        @include flex-center-between;
+        flex-wrap: wrap;
+        gap: var(--gap);
+    }
+
+    &__link {
+        color: currentColor;
+        text-decoration: none;
+        transition: color var(--transition);
+
+        @include hover {
+            color: var(--color-red);
+        }
+    }
+}

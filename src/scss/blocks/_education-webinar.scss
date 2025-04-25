@@ -1,0 +1,62 @@
+@use '../global/functions' as *;
+
+.education-webinar {
+    &__title {
+        font-weight: 400;
+        padding: 0;
+        margin: 0 0 5px;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        padding: 0;
+        margin: 0 0 fluid(30px, 20px);
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item {
+        padding: 20px;
+        display: grid;
+        align-items: start;
+        gap: 20px;
+
+        @include tablet-small-from {
+            grid-template-columns: minmax(0, .4fr) minmax(0, .30fr) minmax(0, 1fr);
+        }
+    }
+
+    &__name {
+        @include fluid-text(18px, 16px);
+        margin: 0;
+        padding: 0;
+    }
+
+    &__img {
+        margin: -20px 0;
+        width: 100%;
+        height: calc(100% + 40px);
+        object-fit: contain;
+        object-position: center bottom;
+        max-width: 189px;
+
+        @include tablet-small {
+            order: 3;
+            margin-top: 0;
+            height: calc(100% + 20px);
+        }
+
+        @include mobile {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__text {
+        margin: 0;
+    }
+}

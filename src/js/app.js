@@ -1,0 +1,12 @@
+import './modules/page.js';
+import './modules/toggle.js';
+import './modules/lenis.js';
+import './modules/fancybox.js';
+import './modules/tel.js';
+import './modules/privacy-policy.js';
+import './modules/swiper.js';
+import './modules/select.js';
+import './modules/tabs.js';
+import './modules/accordion.js';
+import './modules/price.js';
+import './modules/formTrigger.js';

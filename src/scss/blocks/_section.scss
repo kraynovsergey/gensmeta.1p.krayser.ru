@@ -1,0 +1,42 @@
+@use '../global/functions' as *;
+
+.section {
+    padding: fluid(100px, 50px) 0;
+
+    &_pt0 {
+        padding-top: 0;
+    }
+
+    &_pb0 {
+        padding-bottom: 0;
+    }
+
+    &__heading {
+        font-family: var(--second-family);
+        @include fluid-text(70px, 28px);
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: 0.02em;
+        text-align: center;
+        padding: 0;
+        margin: 0 0 fluid(50px, 25px);
+        text-transform: uppercase;
+
+        &_left {
+            text-align: left
+        }
+
+        &:has(+ .section__subheading) {
+            margin: 0 0 fluid(30px, 20px);
+        }
+    }
+
+    &__subheading {
+        @include fluid-text(42px, 20px);
+        line-height: 120%;
+        text-align: center;
+        font-weight: 400;
+        padding: 0;
+        margin: 0 0 fluid(50px, 25px);
+    }
+}

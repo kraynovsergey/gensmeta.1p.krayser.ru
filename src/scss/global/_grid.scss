@@ -1,0 +1,118 @@
+@use '../global/functions' as *;
+
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 var(--gap);
+}
+
+.full-width {
+	margin-left: calc(var(--gap) * -1);
+	margin-right: calc(var(--gap) * -1);
+	padding-left: var(--gap);
+	padding-right: var(--gap);
+}
+
+.full-width-desktop-large {
+	@include desktop-large {
+		margin-left: calc(var(--gap) * -1);
+		margin-right: calc(var(--gap) * -1);
+		padding-left: var(--gap);
+		padding-right: var(--gap);
+	}
+}
+
+.full-width-desktop-medium {
+	@include desktop-medium {
+		margin-left: calc(var(--gap) * -1);
+		margin-right: calc(var(--gap) * -1);
+		padding-left: var(--gap);
+		padding-right: var(--gap);
+	}
+}
+
+.full-width-tablet-large {
+	@include tablet-large {
+		margin-left: calc(var(--gap) * -1);
+		margin-right: calc(var(--gap) * -1);
+		padding-left: var(--gap);
+		padding-right: var(--gap);
+	}
+}
+
+.full-width-tablet {
+	@include tablet {
+		margin-left: calc(var(--gap) * -1);
+		margin-right: calc(var(--gap) * -1);
+		padding-left: var(--gap);
+		padding-right: var(--gap);
+	}
+}
+
+.full-width-tablet-small {
+	@include tablet-small {
+		margin-left: calc(var(--gap) * -1);
+		margin-right: calc(var(--gap) * -1);
+		padding-left: var(--gap);
+		padding-right: var(--gap);
+	}
+}
+
+.full-width-mobile {
+	@include mobile {
+		margin-left: calc(var(--gap) * -1);
+		margin-right: calc(var(--gap) * -1);
+		padding-left: var(--gap);
+		padding-right: var(--gap);
+	}
+}
+
+.visible-tablet-large {
+    @include tablet-large-from {
+        display: none;
+    }
+}
+
+.hidden-tablet-large {
+    @include tablet-large {
+        display: none;
+    }
+}
+
+.visible-tablet {
+    @include tablet-from {
+        display: none;
+    }
+}
+
+.hidden-tablet {
+    @include tablet {
+        display: none;
+    }
+}
+
+.visible-tablet-small {
+    @include tablet-small-from {
+        display: none;
+    }
+}
+
+.hidden-tablet-small {
+    @include tablet-small {
+        display: none;
+    }
+}
+
+.visible-mobile {
+    @include mobile-from {
+        display: none;
+    }
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none;
+    }
+}

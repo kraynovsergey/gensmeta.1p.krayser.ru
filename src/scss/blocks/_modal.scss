@@ -1,0 +1,70 @@
+@use '../global/functions' as *;
+
+.modal {
+    display: none;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: fluid(40px, 20px);
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+
+    &:has(.form_sended) {
+        & .modal__content {
+            display: none;
+        }
+
+        & .modal__sended {
+            display: flex;
+            text-align: center;
+
+            & .modal__text {
+                max-width: 380px;
+                margin: 0 auto;
+                padding-right: 0;
+            }
+
+            & .modal__heading {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__sended {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+    }
+
+    & .is-close-btn {
+        display: none;
+    }
+
+    &__close {
+        width: fluid(24px, 16px);
+        aspect-ratio: 1/1;
+        position: absolute;
+        right: fluid(40px, 20px);
+        top: fluid(40px, 20px);
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.414 11.994L23.7072 1.70084C24.0909 1.30361 24.0799 0.67051 23.6827 0.286831C23.2952 -0.0874723 22.6807 -0.0874723 22.2932 0.286831L12 10.58L1.7068 0.286831C1.30952 -0.0968475 0.676465 -0.0858317 0.292786 0.311394C-0.081517 0.698916 -0.081517 1.31332 0.292786 1.70084L10.586 11.994L0.292786 22.2872C-0.0975955 22.6777 -0.0975955 23.3107 0.292786 23.7012C0.683309 24.0916 1.31632 24.0916 1.7068 23.7012L12 13.408L22.2932 23.7012C22.6837 24.0916 23.3167 24.0916 23.7072 23.7012C24.0975 23.3107 24.0975 22.6777 23.7072 22.2872L13.414 11.994Z' fill='black'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__heading,
+    &__text {
+        padding: 0 fluid(50px, 30px) 0 0;
+    }
+
+    &__heading {
+        @include fluid-text(42px, 24px);
+        line-height: 120%;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+    }
+}

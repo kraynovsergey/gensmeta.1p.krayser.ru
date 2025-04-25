@@ -1,0 +1,25 @@
+@use 'functions' as *;
+
+body {
+	font-family: var(--font-family);
+  	font-weight: normal;
+	font-optical-sizing: auto;
+  	font-style: normal;
+	@include fluid-text(18px, 16px);
+	font-optical-sizing: auto;
+	color: var(--color-primary);
+	text-align: left;
+	background-color: var(--color-bg);
+	font-variation-settings:
+    	"slnt" 0,
+    	"wdth" 100,
+    	"GRAD" 0,
+    	"XOPQ" 96,
+    	"XTRA" 468,
+    	"YOPQ" 79,
+    	"YTAS" 750,
+    	"YTDE" -203,
+    	"YTFI" 738,
+    	"YTLC" 514,
+    	"YTUC" 712;
+}

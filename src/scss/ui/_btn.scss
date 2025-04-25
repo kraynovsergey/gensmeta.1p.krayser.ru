@@ -1,0 +1,97 @@
+@use '../global/functions' as *;
+
+.btn-reset {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    appearance: none;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.btn {
+    padding: 0 fluid(30px, 20px);
+    margin: 0;
+    background: none;
+    border: 0;
+    border-radius: 20px;
+    appearance: none;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: currentColor;
+    transition: var(--transition);
+    height: fluid(60px, 50px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+
+    &_blue-gradient {
+        background: linear-gradient(51deg, #2b5eb7 0%, #07f 100%);
+        color: var(--color-white);
+
+        @include hover {
+            &::before {
+                @include show;
+            }
+        }
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            background-color: #2470da;
+            @include hide;
+        }
+
+        & span {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &_blue {
+        background-color: #2b5eb7;
+        color: var(--color-white);
+
+        @include hover {
+            background-color: #2470da;
+        }
+    }
+
+    &_bordered-white {
+        border: 1.5px solid var(--color-white);
+        color: var(--color-white);
+        transition: color var(--transition), background-color var(--transition);
+
+        @include hover {
+            background-color: var(--color-white);
+            color: var(--color-blue);
+        }
+         
+    }
+
+    &_bordered-blue {
+        border: 1.5px solid #2b5eb7;
+        color: #2b5eb7;
+        transition: color var(--transition), background-color var(--transition);
+
+        @include hover {
+            background-color: #2b5eb7;
+            color: var(--color-white);
+        }
+         
+    }
+}

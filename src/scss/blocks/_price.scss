@@ -1,0 +1,63 @@
+@use '../global/functions' as *;
+
+.price {
+    &__heading {
+        text-align: left;
+        margin: 0;
+    }
+
+    &__header {
+        display: grid;
+        gap: fluid(50px, 20px);
+        margin-bottom: fluid(60px, 30px);
+
+        @include tablet-from {
+            grid-template-columns: minmax(0, 414px) minmax(0, 1fr);
+            align-items: center;
+        }
+    }
+
+    &__flag {
+        background-color: var(--color-white);
+        border-radius: 20px;
+        overflow: hidden;
+        padding: fluid(20px, 15px) 150px fluid(20px, 15px) fluid(30px, 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: fluid(20px, 15px);
+        position: relative;
+        min-height: 164px;
+
+        @include mobile {
+            padding-right: 0;
+        }
+
+        &-title {
+            margin: 0;
+            padding: 0;
+            @include fluid-text(18px, 16px);
+            font-weight: 700;
+        }
+
+        &-text {
+            margin: 0;
+        }
+
+        &-img {
+            width: 165px;
+            height: 100%;
+            object-fit: cover;
+            object-position: left top;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+    }
+}

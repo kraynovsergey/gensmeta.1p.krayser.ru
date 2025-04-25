@@ -1,0 +1,18 @@
+.page {
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+
+    &_loaded {
+		animation: page 1.5s ease-in-out forwards;
+	}
+}
+
+@keyframes page {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

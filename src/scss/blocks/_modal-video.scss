@@ -1,0 +1,15 @@
+@use '../global/functions' as *;
+
+.modal-video {
+    display: none;
+    aspect-ratio: 720/405;
+    padding: 0;
+    width: 100%;
+    max-width: 1024px;
+
+    & iframe {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

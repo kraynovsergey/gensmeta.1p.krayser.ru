@@ -1,0 +1,9 @@
+@use '../global/functions' as *;
+
+.main {
+    padding-top: 100px;
+
+    @include tablet {
+        padding-top: 60px;
+    }
+}

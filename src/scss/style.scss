@@ -1,0 +1,63 @@
+/* VENDORS */
+@use '../../node_modules/lenis/dist/lenis.css';
+@use '../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css' as fancybox-vendor;
+@use '../../node_modules/swiper/swiper.scss' as swiper-vendor;
+@use '../../node_modules/nice-select2/dist/css/nice-select2.css';
+
+/* GLOBAL */
+@use "global/functions";
+@use "global/fonts";
+@use "global/vars";
+@use "global/normalize";
+@use "global/default";
+@use "global/grid";
+
+/* UI */
+@use "ui/bitrix";
+@use "ui/btn";
+@use "ui/typography";
+@use "ui/link";
+@use "ui/scrollbar";
+@use "ui/swiper";
+@use "ui/fancybox";
+@use "ui/tabs";
+@use "ui/accordion";
+
+/* BLOCKS */
+@use 'blocks/page';
+@use 'blocks/block';
+@use 'blocks/header';
+@use 'blocks/main';
+@use 'blocks/section';
+@use 'blocks/intro';
+@use 'blocks/education-formats';
+@use 'blocks/estimator';
+@use 'blocks/modal';
+@use 'blocks/form';
+@use 'blocks/about-course';
+@use 'blocks/modal-video';
+@use 'blocks/resume-card';
+@use 'blocks/resume-content';
+@use 'blocks/resume-portfolio';
+@use 'blocks/program';
+@use 'blocks/program-diplom';
+@use 'blocks/program-step';
+@use 'blocks/program-connect';
+@use 'blocks/schedule';
+@use 'blocks/selector';
+@use 'blocks/documents';
+@use 'blocks/document';
+@use 'blocks/education';
+@use 'blocks/education-full';
+@use 'blocks/education-webinar';
+@use 'blocks/education-start';
+@use 'blocks/education-online';
+@use 'blocks/why-we';
+@use 'blocks/team';
+@use 'blocks/price';
+@use 'blocks/price-item';
+@use 'blocks/reviews';
+@use 'blocks/letters';
+@use 'blocks/faq';
+@use 'blocks/questions';
+@use 'blocks/footer';

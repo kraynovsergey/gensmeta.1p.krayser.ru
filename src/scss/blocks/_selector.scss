@@ -1,0 +1,70 @@
+@use '../global/functions' as *;
+
+.selector {
+    &__input {
+        @include sr-only;
+
+        &:checked {
+            & + .selector__label {
+                & .selector__check {
+                    background-color: var(--color-red);
+                    border-color: var(--color-red);
+
+                    &::after {
+                        left: 52px;
+                        background-color: var(--color-white);
+                    }
+                }
+            }
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    &__check {
+        border: 1px solid #dfdfdf;
+        border-radius: 15px;
+        height: 32px;
+        min-width: 80px;
+        max-width: 80px;
+        padding: 4px 6px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        transition: background-color var(--transition), border-color var(--transition);
+        background-color: var(--color-white);
+
+        & span {
+            min-width: 22px;
+            max-width: 22px;
+            height: 100%;
+            display: flex;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            &:first-child {
+                background-image: url("data:image/svg+xml,%3Csvg width='12' height='2' viewBox='0 0 12 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.688477 1.20312V0.239258H11.2705V1.20312H0.688477Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+
+            &:last-child {
+                background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.7725V10.8086H16.582V11.7725H6Z' fill='%23E01006'/%3E%3Cpath d='M10.8091 6L11.7729 6L11.7729 16.582L10.8091 16.582L10.8091 6Z' fill='%23E01006'/%3E%3C/svg%3E%0A");
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 22px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: var(--color-red);
+            position: absolute;
+            left: 6px;
+            transition: var(--transition);
+        }
+    }
+}

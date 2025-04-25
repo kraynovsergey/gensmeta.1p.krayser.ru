@@ -1,0 +1,250 @@
+@use '../global/functions' as *;
+
+.form {
+    &__fieldsets {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__fieldset {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        position: absolute;
+        left: fluid(20px, 15px);
+        pointer-events: none;
+
+        & span {
+            color: var(--color-red);
+        }
+    }
+
+    /* autoprefixer: off */
+    &__input,
+    &__textarea {
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        width: 100%;
+        outline: none;
+        transition: border-color var(--transition);
+        
+        &:user-invalid {
+            border-color: var(--color-red);
+        }
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            & + label {
+                @include hide;
+            }
+        }
+
+        &::placeholder {
+            color: #7a7a7a;
+        }
+
+        &::-moz-placeholder {
+            color: #7a7a7a;
+        }
+
+        &::-webkit-input-placeholder {
+            color: #7a7a7a;
+        }
+    }
+    /* autoprefixer: on */
+
+    &__input {
+        height: fluid(60px, 50px);
+        padding: 0 fluid(20px, 15px);
+    }
+
+    &__textarea {
+        height: fluid(120px, 100px);
+        padding: fluid(20px, 15px);
+        resize: none;
+    }
+
+    &__policy {
+        margin: 20px 0;
+    }
+
+    &__checkbox {
+        &-input {
+            @include sr-only;
+
+            &:checked {
+                & + .form__checkbox-label .form__checkbox-label-check::after {
+                    @include show;
+                }
+            }
+        }
+
+        &-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+
+            &-check {
+                min-width: 20px;
+                max-width: 20px;
+                aspect-ratio: 1/1;
+                border-radius: 5px;
+                border: 1px solid var(--color-border);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--color-blue);
+
+                &::after {
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.295 0.643799L11.699 2.0688L5.90603 7.7758C5.53039 8.14831 5.02252 8.3569 4.49349 8.35597C3.96447 8.35503 3.45734 8.14464 3.08303 7.7708L0.301025 5.0748L1.69403 3.6378L4.48703 6.3448L10.295 0.643799Z' fill='url(%23paint0_linear_340_1172)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_340_1172' x1='-6.00293' y1='4.35583' x2='21.2573' y2='14.0608' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%232B5EB7'/%3E%3Cstop offset='1' stop-color='%230077FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 12px;
+                    height: 9px;
+                    @include hide;
+                }
+            }
+
+            &-title {
+                & a {
+                    color: var(--color-blue);
+                    text-decoration: none;
+
+                    @include hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    &__btn {
+        &:disabled {
+            opacity: .3;
+            cursor: not-allowed;
+        }
+        
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__prices {
+        margin-bottom: fluid(30px, 20px);
+
+        &-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: fluid(60px, 20px);
+        }
+
+        &-value {
+            @include fluid-text(40px, 30px);
+            font-weight: 700;
+            min-width: 190px;
+        }
+    }
+
+    &__method {
+        margin-bottom: 20px;
+    }
+
+    &__select {
+        float: none;
+        height: 60px;
+        border: 1px solid #dfdfdf !important;
+        background-color: var(--color-bg);
+        border-radius: 10px;
+        @include fluid-text(18px, 16px);
+        line-height: 60px;
+        padding: 0 fluid(20px, 15px);
+
+        & .current {
+            width: calc(100% - fluid(20px, 15px));
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & .nice-select-dropdown {
+            border: 1px solid #dfdfdf !important;
+            background-color: var(--color-bg);
+            border-radius: 10px;
+            padding: 10px 20px;
+            width: 100%;
+
+            & .list {
+                margin: 0;
+
+                & li {
+                    padding: 0;
+                    background-color: transparent !important;
+                    transition: color var(--transition);
+                    white-space: normal;
+                    line-height: 110%;
+
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+
+                    @include hover {
+                        color: var(--color-red);
+                    }
+
+                    &.disabled {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.70986 4.79116C8.61613 4.88412 8.54174 4.99472 8.49097 5.11658C8.4402 5.23844 8.41406 5.36915 8.41406 5.50116C8.41406 5.63317 8.4402 5.76388 8.49097 5.88574C8.54174 6.0076 8.61613 6.1182 8.70986 6.21116L13.2899 10.7912C13.3836 10.8841 13.458 10.9947 13.5088 11.1166C13.5595 11.2384 13.5857 11.3691 13.5857 11.5012C13.5857 11.6332 13.5595 11.7639 13.5088 11.8857C13.458 12.0076 13.3836 12.1182 13.2899 12.2112L8.70986 16.7912C8.61613 16.8841 8.54174 16.9947 8.49097 17.1166C8.4402 17.2384 8.41406 17.3691 8.41406 17.5012C8.41406 17.6332 8.4402 17.7639 8.49097 17.8857C8.54174 18.0076 8.61613 18.1182 8.70986 18.2112C8.89722 18.3974 9.15067 18.502 9.41486 18.502C9.67905 18.502 9.9325 18.3974 10.1199 18.2112L14.7099 13.6212C15.2717 13.0587 15.5872 12.2962 15.5872 11.5012C15.5872 10.7062 15.2717 9.94366 14.7099 9.38116L10.1199 4.79116C9.9325 4.60491 9.67905 4.50037 9.41486 4.50037C9.15067 4.50037 8.89722 4.60491 8.70986 4.79116Z' fill='%23E01006'/%3E%3C/svg%3E%0A");
+            border: none !important;
+            right: 12px;
+            margin-top: -12px;
+            transform: none;
+        }
+
+        &.open {
+            &::after {
+                transform: rotate(90deg);
+                right: 20px;
+            }
+        }
+    }
+
+    &__policy-items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+select.form__select {
+    @include sr-only;
+    float: unset;
+}

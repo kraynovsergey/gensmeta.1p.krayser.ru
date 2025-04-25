@@ -1,0 +1,210 @@
+@use 'sass:math';
+@use 'sass:color';
+
+@function fluid($size-at-max-width, $size-at-min-width) {
+    $slope: calc(($size-at-max-width - $size-at-min-width) / (1140px - 360px));
+    $y-axis-intersection: -1 * 360px * $slope + $size-at-min-width;
+    $return-value: clamp(#{$size-at-min-width}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$size-at-max-width});
+    @return $return-value;
+}
+
+@function hextorgb($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+@mixin desktop-large {
+    @media (max-width: 1680px) {
+        @content;
+    }
+}
+
+@mixin desktop-medium {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin tablet-large {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tablet-small {
+    @media (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin mobile-small {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin mobile-extrasmall {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin desktop-large-from {
+    @media (min-width: 1681px) {
+        @content;
+    }
+}
+
+@mixin desktop-medium-from {
+    @media (min-width: 1441px) {
+        @content;
+    }
+}
+
+@mixin tablet-large-from {
+    @media (min-width: 1281px) {
+        @content;
+    }
+}
+
+@mixin tablet-from {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}
+
+@mixin tablet-small-from {
+    @media (min-width: 801px) {
+        @content;
+    }
+}
+
+@mixin mobile-from {
+    @media (min-width: 577px) {
+        @content;
+    }
+}
+
+@mixin mobile-small-from {
+    @media (min-width: 376px) {
+        @content;
+    }
+}
+
+@mixin mobile-extrasmall-from {
+    @media (min-width: 321px) {
+        @content;
+    }
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+    @media (any-hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @if ($hasActiveEffectOnMobile) {
+        @media (any-hover: none) {
+            &:active {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin retina($dpi: 144, $dppx: 1.5) {
+
+    @media (min-resolution: #{$dpi}dpi),
+    (min-resolution: #{$dppx}dppx) {
+        @content;
+    }
+}
+
+@mixin color-scheme($colorScheme: 'dark') {
+    @media (prefers-color-scheme: $colorScheme) {
+        @content;
+    }
+}
+
+@mixin hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility var(--transition), opacity var(--transition);
+}
+
+@mixin show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility var(--transition), opacity var(--transition);
+}
+
+@mixin fluid-text($max: 48, $min: 16) {
+    font-size: fluid($max, $min);
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-start {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin abs-x {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+}
+
+@mixin abs-y {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+@mixin sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(100%) !important;
+}

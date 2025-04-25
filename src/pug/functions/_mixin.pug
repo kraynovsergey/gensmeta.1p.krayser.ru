@@ -1,0 +1,15 @@
+mixin sprite(classname, width, height, id)
+    svg(class=classname width=width height=height)
+        use(xlink:href="@img/icons/icons.svg#"+id)
+
+mixin education-format-item(icon, title, subtitle)
+    section.education-formats__item.block
+        .education-formats__header
+            h4.education-formats__title=title
+            img.education-formats__icon(src="@img/"+icon alt=title width="24" height="24" loading="lazy")
+        p.primary-lh.education-formats__subtitle=subtitle
+
+mixin education-start-item(number, text)
+    .education-start__item
+        .education-start__number.number-text !{number}
+        .education-start__text.primary-lh !{text}

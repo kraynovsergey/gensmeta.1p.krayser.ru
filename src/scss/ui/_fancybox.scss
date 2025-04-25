@@ -1,0 +1,13 @@
+@use '../global/functions' as *;
+
+body.hide-scrollbar {
+    & .header {
+        width: calc(100% - var(--fancybox-scrollbar-compensate,0px));
+    }
+}
+
+.fancybox {
+    &__backdrop {
+        background-color: rgba(0,0,0,.4);
+    }
+}

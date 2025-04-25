@@ -1,0 +1,14 @@
+@use '../global/functions' as *;
+
+.block {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.block-blue {
+    border-radius: var(--border-radius);
+    background: linear-gradient(19deg, #2b5eb7 0%, #07f 100%);
+    overflow: hidden;
+}

@@ -1,0 +1,46 @@
+@use '../global/functions' as *;
+
+.education {
+    &__tabs {
+        margin-bottom: fluid(30px, 20px);
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__tab {
+        border: 1px solid transparent;
+
+        &:not(.active) {
+            color: var(--color-black);
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+
+            @include hover {
+                color: var(--color-white);
+            }
+        }
+    }
+
+    &__content {
+        padding: fluid(50px, 20px);
+    }
+
+    &__tab-content {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(30px, 20px);
+    }
+
+    &__btn {
+        height: fluid(80px, 60px);
+    }
+
+    &__block {
+        padding: fluid(30px, 20px) fluid(40px, 20px);
+        border: 1px solid var(--color-border);
+        background-color: var(--color-bg);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}

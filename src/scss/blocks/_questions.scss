@@ -1,0 +1,125 @@
+@use '../global/functions' as *;
+
+.questions {
+    padding: fluid(50px, 25px);
+    position: relative;
+    color: var(--color-white);
+
+    &__header {
+        margin-bottom: fluid(50px, 25px);
+        position: relative;
+        z-index: 3;
+
+        @include mobile-from {
+            width: 70%;
+        }
+    }
+
+    &__heading {
+        padding: 0;
+        margin: 0 0 fluid(40px, 20px);
+        font-weight: normal;
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: fluid(20px, 15px);
+    }
+
+    &__item {
+        padding-top: fluid(30px, 20px);
+        border-top: 1px solid #557fc6;
+        position: relative;
+        z-index: 3;
+
+        @include mobile-from {
+            width: 40%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: fluid(30px, 20px);
+        line-height: 130%;
+
+        & a {
+            color: var(--color-white);
+            text-decoration: none;
+            transition: color var(--transition);
+
+            @include hover {
+                color: var(--color-light-blue);
+            }
+        }
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    &__medias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__media {
+        min-width: 48px;
+        max-width: 48px;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+        background-color: var(--color-white);
+        border: 2px solid var(--color-white);
+        overflow: hidden;
+        @include flex-center;
+        color: #2B5EB7;
+        transition: background-color var(--transition), color var(--transition);
+
+        @include hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+    }
+
+    &__copyright {
+        font-size: 16px;
+    }
+
+    &__license {
+        margin-top: 20px !important;
+        display: flex;
+        align-items: flex-start;
+
+        & a {
+            color: var(--color-light-blue);
+        }
+    }
+
+    &__lines {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        z-index: 1;
+        pointer-events: none;
+        width: 27%;
+        height: auto;
+    }
+
+    &__people {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        pointer-events: none;
+        width: 52%;
+        height: auto;
+    }
+}

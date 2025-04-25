@@ -1,0 +1,13 @@
+@use '../global/functions' as *;
+
+.program {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(50px, 30px);
+
+    &__steps {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+    }
+}
