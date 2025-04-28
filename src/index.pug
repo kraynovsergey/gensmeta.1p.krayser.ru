@@ -173,7 +173,7 @@ html(lang="ru")
                                     h4.education-formats__title.gradient-text Курс подходит вам, если вы:
 
                             +education-format-item('about-course-level-1.svg', 'Новичок', 'У вас нет опыта и знаний. Хотите освоить новую профессию')
-                            +education-format-item('about-course-level-2.svg', 'Опытный', 'Практикующий специалист, желающим повысить квалификацию')
+                            +education-format-item('about-course-level-2.svg', 'Опытный', 'Практикующий специалист, желающий повысить квалификацию')
 
                         .about-course__box.block-blue
                             .about-course__box-header
@@ -456,7 +456,7 @@ html(lang="ru")
                                         a.btn.btn_bordered-white.program-connect__link(href="https://api.whatsapp.com/send/?phone=79031870236&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C" target="_blank" rel="nofollow") Написать в WhatsApp
                                         a.btn.btn_bordered-white.program-connect__link(href="https://t.me/+79031870236" target="_blank" rel="nofollow") Написать в Telegram
                                         button.btn.btn_bordered-white.program-connect__link(type="button" data-src="#modal-callback" data-fancybox) Заказать звонок
-                                img.program-connect__img.hidden-tablet(srcset="@img/program-connect.webp 1x, @img/program-connect@2x.webp 2x" alt="Затрудняетесь с выбором?" width="480" height="218" loading="lazy")
+                                img.program-connect__img.hidden-tablet(srcset="@img/program-connect.webp 1x, @img/program-connect@2x.webp 2x" alt="Затрудняетесь с выбором?" width="530" height="217" loading="lazy")
 
                 //Расписание
                 section.section(id="block-6")
@@ -500,7 +500,7 @@ html(lang="ru")
                                         a.btn.btn_bordered-blue.program-connect__link(href="https://api.whatsapp.com/send/?phone=79031870236&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C" target="_blank" rel="nofollow") Написать в WhatsApp
                                         a.btn.btn_bordered-blue.program-connect__link(href="https://t.me/+79031870236" target="_blank" rel="nofollow") Написать в Telegram
                                         button.btn.btn_bordered-blue.program-connect__link(type="button" data-src="#modal-callback" data-fancybox) Заказать звонок
-                                img.program-connect__img.hidden-tablet(srcset="@img/schedule-connect.webp 1x, @img/schedule-connect@2x.webp 2x" alt="Приобретаете отдельную дисциплину?" width="347" height="217" loading="lazy")
+                                img.program-connect__img.hidden-tablet(srcset="@img/schedule-connect.webp 1x, @img/schedule-connect@2x.webp 2x" alt="Приобретаете отдельную дисциплину?" width="376" height="217" loading="lazy")
 
                 //Документы
                 section.section(id="block-7")
@@ -600,7 +600,7 @@ html(lang="ru")
 
                                     article.education__block.education-webinar
                                         h3.education-webinar__title.big-text Обучение в формате вебинара
-                                        h4.education-webinar__subtitle.middle-text Дистанционное присутствие занятиях
+                                        h4.education-webinar__subtitle.middle-text Дистанционное присутствие на занятиях
                                         .education-webinar__items
                                             mixin education-webinar-item(img, title, text)
                                                 .education-webinar__item.block
@@ -950,15 +950,15 @@ html(lang="ru")
 
                         .price__items
                             article.price-item.block-blue
-                                .price-item__content(data-form-trigger-closest)
-                                    .price-item__info(data-price-closest)
+                                .price-item__content(data-price-closest data-form-trigger-closest)
+                                    .price-item__info
                                         h4.price-item__title.big-text Очно / Вебинар
 
                                         .price-item__price Полный пакет
-                                            .number-text <span>от</span> <em data-price-value>101 915</em> <span>р.</span> 
+                                            .number-text <span>от</span> <em data-price-value></em> <span>р.</span> 
 
                                         .price-item__selector.selector
-                                            input.selector__input(type="checkbox" name="param" id="price-full-selector" data-price-selector data-price-min="101 915" data-price-max="121 465")
+                                            input.selector__input(type="checkbox" name="param" id="price-full-selector" data-price-bim)
                                             label.selector__label(for="price-full-selector")
                                                 span.selector__check
                                                     span
@@ -969,24 +969,24 @@ html(lang="ru")
 
                                     .price-item__controls
                                         select.form__select(name="method" data-select)
-                                            option(value="" selected disabled) Выберите способ обучения
-                                            option(value="Физ. лицо") Физ. лицо
-                                            option(value="Юр. лицо") Юр. лицо
-                                            option(value="Студент, пенсионер, безработный") Студент, пенсионер, безработный
+                                            option(value="" data-price="101915" data-price-selector="121465" selected disabled) Выберите способ обучения
+                                            option(value="Физ. лицо" data-price="101915" data-price-selector="121465") Физ. лицо
+                                            option(value="Юр. лицо" data-price="119900" data-price-selector="142900") Юр. лицо
+                                            option(value="Студент, пенсионер, безработный" data-price="95920" data-price-selector="114320") Студент, пенсионер, безработный
                                         .price-item__controls-btns
                                             button.btn.btn_blue(type="button" data-src="#modal-order-all" data-fancybox data-form-trigger) Оставить заявку
 
 
                             article.price-item.block-blue
-                                .price-item__content(data-form-trigger-closest)
-                                    .price-item__info(data-price-closest)
+                                .price-item__content(data-price-closest data-form-trigger-closest)
+                                    .price-item__info
                                         h4.price-item__title.big-text Онлайн курс
 
                                         .price-item__price Полный пакет
-                                            .number-text <span>от</span> <em data-price-value>54 697</em> <span>р.</span> 
+                                            .number-text <span>от</span> <em data-price-value></em> <span>р.</span> 
 
                                         .price-item__selector.selector
-                                            input.selector__input(type="checkbox" name="param" id="price-online-selector" data-price-selector data-price-min="54 697" data-price-max="65 155")
+                                            input.selector__input(type="checkbox" name="param" id="price-online-selector" data-price-bim)
                                             label.selector__label(for="price-online-selector")
                                                 span.selector__check
                                                     span
@@ -1005,10 +1005,10 @@ html(lang="ru")
 
                                     .price-item__controls
                                         select.form__select(name="method" data-select)
-                                            option(value="" selected disabled) Выберите способ обучения
-                                            option(value="Физ. лицо самостоятельно") Физ. лицо самостоятельно
-                                            option(value="Физ. лицо с поддержкой преподавателя") Физ. лицо с поддержкой преподавателя
-                                            option(value="Юр. лицо") Юр. лицо
+                                            option(value="" data-price="54697" data-price-selector="65155" selected disabled) Выберите способ обучения
+                                            option(value="Физ. лицо самостоятельно" data-price="54697" data-price-selector="65155") Физ. лицо самостоятельно
+                                            option(value="Физ. лицо с поддержкой преподавателя" data-price="79614" data-price-selector="94886") Физ. лицо с поддержкой преподавателя
+                                            option(value="Юр. лицо" data-price="99517" data-price-selector="118607") Юр. лицо
                                         .price-item__controls-btns
                                             button.btn.btn_blue(type="button" data-src="#modal-order-online" data-fancybox data-form-trigger) Оставить заявку
                                             button.btn.btn_bordered-blue(type="button" data-src="#modal-order-online" data-fancybox data-form-trigger) Оплатить
@@ -1390,20 +1390,20 @@ html(lang="ru")
 
                 //Для показа "Спасибо" после отправки формы к .form надо добавить класс .form_sended
                 //Демонстрация скрипта находится в onsubmit, на бэке это событие удалить
-                form.form(action="#" method="post" novalidate onsubmit="if (this.querySelectorAll('input:user-invalid').length === 0) { this.classList.add('form_sended'); this.reset(); }; return false;")
+                form.form(action="#" method="post" novalidate data-price-closest onsubmit="if (this.querySelectorAll('input:user-invalid').length === 0) { this.classList.add('form_sended'); this.reset(); }; return false;")
                     .form__method
                         select.form__select(name="method" data-select)
-                            option(value="" selected disabled) Выберите способ обучения
-                            option(value="Физ. лицо") Физ. лицо
-                            option(value="Юр. лицо") Юр. лицо
-                            option(value="Студент, пенсионер, безработный") Студент, пенсионер, безработный
+                            option(value="" data-price="101915" data-price-selector="121465" selected disabled) Выберите способ обучения
+                            option(value="Физ. лицо" data-price="101915" data-price-selector="121465") Физ. лицо
+                            option(value="Юр. лицо" data-price="119900" data-price-selector="142900") Юр. лицо
+                            option(value="Студент, пенсионер, безработный" data-price="95920" data-price-selector="114320") Студент, пенсионер, безработный
 
-                    .form__prices(data-price-closest)
+                    .form__prices
                         .form__prices-title Стоимость обучения:
                         .form__prices-content
-                            .form__prices-value.number-text <em data-price-value>101 915</em> <span>р.</span>
+                            .form__prices-value.number-text <em data-price-value></em> <span>р.</span>
                             .selector
-                                input.selector__input(type="checkbox" name="param" id="order-all-selector" data-price-selector data-price-min="101 915" data-price-max="121 465")
+                                input.selector__input(type="checkbox" name="param" id="order-all-selector" data-price-bim)
                                 label.selector__label(for="order-all-selector")
                                     span.selector__check
                                         span
@@ -1448,20 +1448,20 @@ html(lang="ru")
 
                 //Для показа "Спасибо" после отправки формы к .form надо добавить класс .form_sended
                 //Демонстрация скрипта находится в onsubmit, на бэке это событие удалить
-                form.form(action="#" method="post" novalidate onsubmit="if (this.querySelectorAll('input:user-invalid').length === 0) { this.classList.add('form_sended'); this.reset(); }; return false;")
+                form.form(action="#" method="post" novalidate data-price-closest onsubmit="if (this.querySelectorAll('input:user-invalid').length === 0) { this.classList.add('form_sended'); this.reset(); }; return false;")
                     .form__method
                         select.form__select(name="method" data-select)
-                            option(value="" selected disabled) Выберите способ обучения
-                            option(value="Физ. лицо самостоятельно") Физ. лицо самостоятельно
-                            option(value="Физ. лицо с поддержкой преподавателя") Физ. лицо с поддержкой преподавателя
-                            option(value="Юр. лицо") Юр. лицо
+                            option(value="" data-price="54697" data-price-selector="65155" selected disabled) Выберите способ обучения
+                            option(value="Физ. лицо самостоятельно" data-price="54697" data-price-selector="65155") Физ. лицо самостоятельно
+                            option(value="Физ. лицо с поддержкой преподавателя" data-price="79614" data-price-selector="94886") Физ. лицо с поддержкой преподавателя
+                            option(value="Юр. лицо" data-price="99517" data-price-selector="118607") Юр. лицо
 
                     .form__prices
                         .form__prices-title Стоимость обучения:
-                        .form__prices-content(data-price-closest)
-                            .form__prices-value.number-text <em data-price-value>54 697</em> <span>р.</span>
+                        .form__prices-content
+                            .form__prices-value.number-text <em data-price-value></em> <span>р.</span>
                             .selector
-                                input.selector__input(type="checkbox" name="param" id="order-online-selector" data-price-selector data-price-min="54 697" data-price-max="65 155")
+                                input.selector__input(type="checkbox" name="param" id="order-online-selector" data-price-bim)
                                 label.selector__label(for="order-online-selector")
                                     span.selector__check
                                         span

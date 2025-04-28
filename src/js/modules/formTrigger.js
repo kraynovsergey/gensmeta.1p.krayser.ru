@@ -3,21 +3,19 @@ if (formTrigger.length > 0) {
     formTrigger.forEach(el => {
         el.addEventListener('click', () => {
             const formTriggerClosest = el.closest('[data-form-trigger-closest]');
-            const priceSelector = formTriggerClosest.querySelector('[data-price-selector]');
+            const priceSelector = formTriggerClosest.querySelector('[data-price-bim]');
             const select = formTriggerClosest.querySelector('select[name="method"]');
             const modal = document.querySelector(el.dataset.src);
-            const modalSelector = modal.querySelector('[data-price-selector]');
-            const modalSelect = modal.querySelector('select[name="method"]');
-
-            console.log(modal);
+            const modalSelector = modal.querySelector('[data-price-bim]');
+            const modalSelect = modal.querySelector('select[name="method"]'); 
 
             modalSelector.checked = priceSelector.checked;
-            modalSelector.dispatchEvent(new Event('change'));
-
             if (select.value) {
                 modalSelect.value = select.value;
                 modalSelect.nextSibling.querySelector('.current').textContent = select.value;
             }
+
+            modalSelector.dispatchEvent(new Event('change'));
         });
     });
 }

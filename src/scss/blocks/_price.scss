@@ -30,7 +30,7 @@
         min-height: 164px;
 
         @include mobile {
-            padding-right: 0;
+            padding-right: fluid(30px, 20px);
         }
 
         &-title {

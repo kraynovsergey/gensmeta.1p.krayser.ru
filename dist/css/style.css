@@ -3657,10 +3657,11 @@ select.form__select {
 .resume-card__salary::after {
   content: "";
   margin-left: 10px;
-  width: 85%;
+  max-width: 180px;
   aspect-ratio: 180/25;
   background-image: url("data:image/svg+xml,%3Csvg width='180' height='25' viewBox='0 0 180 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.93944 11.6027C40.2861 5.60669 121.957 0.0127009 178.241 4.8677' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M3.17676 21.5344C58.4743 17.0066 107.137 12.4429 176.823 23.3094' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .resume-card__salary-title {
@@ -4007,8 +4008,8 @@ select.form__select {
 .program-connect__img {
   z-index: 1;
   position: absolute;
-  right: clamp(25px, 13.4615384615px + 0.0320512821 * 100vw, 50px);
-  width: 43%;
+  right: 0;
+  width: 48%;
   height: auto;
 }
 
@@ -4277,6 +4278,7 @@ select.form__select {
   gap: 10px;
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 .document__tooltip-btn::after {
@@ -5818,8 +5820,7 @@ select.form__select {
   }
 
   .resume-card {
-    justify-items: center;
-    text-align: center;
+    justify-items: start;
   }
 
   .resume-card__salary::after {
@@ -6045,9 +6046,17 @@ select.form__select {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .estimator__heading {
+    justify-content: flex-start;
+  }
+
+  .estimator__subheading {
+    text-align: left;
+  }
+
   .estimator__list-item {
     width: 100%;
-    text-align: center;
+    gap: 15px;
   }
 
   .form__btn {
@@ -6086,10 +6095,15 @@ select.form__select {
 
   .resume-card__salary {
     width: 100%;
+    align-items: center;
   }
 
   .resume-content__block-list {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .program-diplom__block {
+    aspect-ratio: 300/200;
   }
 
   .program-connect__link {
@@ -6123,7 +6137,7 @@ select.form__select {
   }
 
   .price__flag {
-    padding-right: 0;
+    padding-right: clamp(20px, 15.3846153846px + 0.0128205128 * 100vw, 30px);
   }
 
   .price-item__controls-btns .btn {
