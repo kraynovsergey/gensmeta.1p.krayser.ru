@@ -36,16 +36,13 @@
         font-weight: 700;
         padding: 0;
         margin: 0 0 fluid(30px, 20px);
-        
-        &::after {
-            content: '';
-            display: block;
+
+        & svg {
             width: 100%;
             max-width: 299px;
-            aspect-ratio: 299/27;
-            background-image: url("data:image/svg+xml,%3Csvg width='299' height='27' viewBox='0 0 299 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.63379 6.54184C49.943 2.0141 238.308 -2.74379 290.366 8.12279' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M46.1444 22.5397C74.8921 17.487 210.944 16.3008 252.889 22.5364' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
-            background-size: contain;
+            height: auto;
             margin-top: 5px;
+            display: block;
         }
     }
 

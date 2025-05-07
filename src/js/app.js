@@ -1,4 +1,3 @@
-import './modules/page.js';
 import './modules/toggle.js';
 import './modules/lenis.js';
 import './modules/fancybox.js';

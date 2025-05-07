@@ -1,70 +1,36 @@
 @use '../global/functions' as *;
 
 .education-online {
-    &__heading {
+    &__title {
         font-weight: 400;
         padding: 0;
         margin: 0 0 fluid(30px, 20px);
-    }
-
-    &__items {
-        display: grid;
-        gap: var(--gap);
-
-        @include tablet-small-from {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
-
-    &__item {
-        border-radius: 10px;
-        padding: fluid(20px, 15px);
-    }
-
-    &__title {
-        @include fluid-text(18px, 16px);
-        font-weight: 700;
-        padding: 0;
-        margin: 0 0 fluid(20px, 15px);
     }
 
     &__list {
         margin: 0;
         padding: 0;
         list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        line-height: 130%;
 
-        &-item {
+        & li {
             position: relative;
-            padding-left: fluid(34px, 30px);
-
-            &:not(:last-child) {
-                margin-bottom: 14px;
-            }
+            padding-left: 34px;
 
             &::before {
                 content: '';
-                width: fluid(24px, 20px);
-                aspect-ratio: 1/1;
-                display: block;
+                width: 24px;
+                height: 25px;
                 position: absolute;
                 left: 0;
                 top: 0;
+                transform: translateY(-2%);
                 background-repeat: no-repeat;
                 background-size: contain;
-            }
-
-            &_true {
-                &::before {
-                    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.798 8.67081L18.202 10.0958L12.409 15.8028C12.0334 16.1753 11.5255 16.3839 10.9965 16.383C10.4674 16.382 9.96032 16.1716 9.586 15.7978L6.804 13.1018L8.197 11.6648L10.99 14.3718L16.798 8.67081ZM24.5 12.3828C24.5 18.9998 19.117 24.3828 12.5 24.3828C5.883 24.3828 0.5 18.9998 0.5 12.3828C0.5 5.76581 5.883 0.382812 12.5 0.382812C19.117 0.382812 24.5 5.76581 24.5 12.3828ZM22.5 12.3828C22.5 6.86881 18.014 2.38281 12.5 2.38281C6.986 2.38281 2.5 6.86881 2.5 12.3828C2.5 17.8968 6.986 22.3828 12.5 22.3828C18.014 22.3828 22.5 17.8968 22.5 12.3828Z' fill='url(%23paint0_linear_333_9447)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_333_9447' x1='0.5' y1='12.3828' x2='27.7602' y2='22.0877' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%232B5EB7'/%3E%3Cstop offset='1' stop-color='%230077FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-                }
-            }
-
-            &_false {
-                color: #808080;
-
-                &::before {
-                    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_333_9455)'%3E%3Cpath d='M15.707 9.707L13.414 12L15.707 14.293C15.8945 14.4805 15.9998 14.7348 15.9998 15C15.9998 15.2652 15.8945 15.5195 15.707 15.707C15.5195 15.8945 15.2652 15.9998 15 15.9998C14.7348 15.9998 14.4805 15.8945 14.293 15.707L12 13.414L9.707 15.707C9.61435 15.8002 9.50419 15.8741 9.38285 15.9246C9.26152 15.9751 9.13141 16.001 9 16.001C8.86859 16.001 8.73848 15.9751 8.61715 15.9246C8.49581 15.8741 8.38565 15.8002 8.293 15.707C8.20005 15.6142 8.12632 15.504 8.07601 15.3827C8.02569 15.2614 7.9998 15.1313 7.9998 15C7.9998 14.8687 8.02569 14.7386 8.07601 14.6173C8.12632 14.496 8.20005 14.3858 8.293 14.293L10.586 12L8.293 9.707C8.10549 9.51949 8.00015 9.26518 8.00015 9C8.00015 8.73482 8.10549 8.48051 8.293 8.293C8.48051 8.10549 8.73482 8.00015 9 8.00015C9.26518 8.00015 9.51949 8.10549 9.707 8.293L12 10.586L14.293 8.293C14.4805 8.10549 14.7348 8.00015 15 8.00015C15.2652 8.00015 15.5195 8.10549 15.707 8.293C15.8945 8.48051 15.9998 8.73482 15.9998 9C15.9998 9.26518 15.8945 9.51949 15.707 9.707ZM24 12C24 18.617 18.617 24 12 24C5.383 24 0 18.617 0 12C0 5.383 5.383 0 12 0C18.617 0 24 5.383 24 12ZM22 12C22 6.486 17.514 2 12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12Z' fill='%23808080'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_333_9455'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-                }
+                background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.798 8.67081L18.202 10.0958L12.409 15.8028C12.0334 16.1753 11.5255 16.3839 10.9965 16.383C10.4674 16.382 9.96032 16.1716 9.586 15.7978L6.804 13.1018L8.197 11.6648L10.99 14.3718L16.798 8.67081ZM24.5 12.3828C24.5 18.9998 19.117 24.3828 12.5 24.3828C5.883 24.3828 0.5 18.9998 0.5 12.3828C0.5 5.76581 5.883 0.382812 12.5 0.382812C19.117 0.382812 24.5 5.76581 24.5 12.3828ZM22.5 12.3828C22.5 6.86881 18.014 2.38281 12.5 2.38281C6.986 2.38281 2.5 6.86881 2.5 12.3828C2.5 17.8968 6.986 22.3828 12.5 22.3828C18.014 22.3828 22.5 17.8968 22.5 12.3828Z' fill='url(%23paint0_linear_482_5644)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_482_5644' x1='0.5' y1='12.3828' x2='27.7602' y2='22.0877' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%232B5EB7'/%3E%3Cstop offset='1' stop-color='%230077FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
             }
         }
     }

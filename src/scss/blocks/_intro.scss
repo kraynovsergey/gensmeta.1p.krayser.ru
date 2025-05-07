@@ -69,15 +69,9 @@
             }
         }
 
-        &::after {
-            content: '';
-            background-image: url("data:image/svg+xml,%3Csvg width='257' height='31' viewBox='0 0 257 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40.3297 7.59096C78.8121 2.53831 160.595 -1.04861 216.744 5.18697' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M2 28.5908C57.2975 24.0631 185.314 17.7242 255 28.5908' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
-            align-self: flex-end;
+        & svg {
             width: fluid(257px, 100px);
-            aspect-ratio: 257/31;
-            display: flex;
-            background-size: contain;
-            background-repeat: no-repeat;
+            height: auto;
         }
     }
 
@@ -104,6 +98,21 @@
         left: 0;
         bottom: 0;
         width: 25%;
-        height: auto;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+
+        &-operations {
+            position: absolute;
+            width: 95%;
+            height: auto;
+            top: 0;
+            transform: translateY(200%);
+            left: 0;
+            z-index: -1;
+        }
     }
 }

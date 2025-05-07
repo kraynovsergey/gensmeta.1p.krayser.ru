@@ -24,8 +24,8 @@
 @use "ui/accordion";
 
 /* BLOCKS */
-@use 'blocks/page';
 @use 'blocks/block';
+@use 'blocks/lines';
 @use 'blocks/header';
 @use 'blocks/main';
 @use 'blocks/section';

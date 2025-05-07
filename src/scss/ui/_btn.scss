@@ -52,7 +52,7 @@
             height: 100%;
             position: absolute;
             z-index: 1;
-            background-color: #2470da;
+            background-color: var(--color-blue);
             @include hide;
         }
 
@@ -67,7 +67,7 @@
         color: var(--color-white);
 
         @include hover {
-            background-color: #2470da;
+            background-color: var(--color-blue);
         }
     }
 
@@ -89,7 +89,8 @@
         transition: color var(--transition), background-color var(--transition);
 
         @include hover {
-            background-color: #2b5eb7;
+            background-color: var(--color-blue);
+            border-color: var(--color-blue);
             color: var(--color-white);
         }
          

@@ -1,0 +1,9 @@
+@use '../global/functions' as *;
+
+.lines {
+    overflow: hidden;
+
+    & path {
+        transform: translateX(-100%);
+    }
+}

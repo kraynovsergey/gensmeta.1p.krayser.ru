@@ -10,12 +10,15 @@ if (formTrigger.length > 0) {
             const modalSelect = modal.querySelector('select[name="method"]'); 
 
             modalSelector.checked = priceSelector.checked;
+
             if (select.value) {
                 modalSelect.value = select.value;
                 modalSelect.nextSibling.querySelector('.current').textContent = select.value;
             }
 
-            modalSelector.dispatchEvent(new Event('change'));
+            if (select.value || priceSelector.checked) {
+                modalSelector.dispatchEvent(new Event('change'));
+            }
         });
     });
 }

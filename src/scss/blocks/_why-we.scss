@@ -57,63 +57,16 @@
         }
     }
 
-    &__content {
-        border-radius: 20px;
-        background-color: var(--color-white);
-        padding: fluid(30px, 20px);
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap);
-    }
-
-    &__tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    &__tab {
-        border-radius: 20px;
-        border: 1px solid var(--color-border);
-        gap: 5px;
-        align-items: center;
-        display: flex;
-        padding: fluid(20px, 15px);
-        transition: background-color var(--transition), border-color var(--transition), color var(--transition);
-        text-align: left;
-
-        @include mobile {
-            gap: 10px;
-            width: 100%;
-        }
-
-        & svg {
-            color: #2B5EB7;
-            transition: color var(--transition);
-        }
-
-        &.active {
-            background-color: #2B5EB7;
-            color: var(--color-white);
-            border-color: #2B5EB7;
-
-            & svg {
-                color: var(--color-light-blue);
-            }
-        }
-    }
-
     &__block-blue {
         display: grid;
-        align-items: center;
         gap: fluid(70px, 20px);
-        padding: 0 fluid(30px, 20px);
+        padding: fluid(40px, 20px);
         color: var(--color-white);
         border-radius: 10px;
-        min-height: 287px;
+        min-height: 350px;
 
         @include tablet-small-from {
-            grid-template-columns: minmax(0, .6fr) minmax(0, .4fr);
+            grid-template-columns: minmax(0, .7fr) minmax(0, .3fr);
         }
 
         @include tablet-small {
@@ -126,25 +79,27 @@
     &__tabs-bg {
         width: 100%;
         object-fit: contain;
-        max-width: 274px;
+        max-width: 250px;
+        height: auto;
+    }
 
-        @include tablet-small-from {
-            margin: calc(fluid(50px, 40px) * -1) 0;
-            height: calc(100% + fluid(50px, 40px));
+    &__swiper {
+        width: 100%;
+
+        & .swiper-slide {
+            padding-bottom: 60px;
         }
 
-        @include tablet-small {
-            height: auto;
+        & .swiper__fraction {
+            min-width: 55px;
+            text-align: center;
         }
     }
 
     &__block-content {
+        display: flex;
         flex-direction: column;
         gap: fluid(20px, 15px);
-
-        @include tablet-small-from {
-            padding: fluid(30px, 20px) 0;
-        }
     }
 
     &__block-title {
@@ -194,7 +149,7 @@
             margin: 0;
             padding: 0;
             font-weight: 400;
-            max-width: 383px;
+            max-width: 440px;
         }
 
         &-controls {
@@ -232,6 +187,21 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 28%;
+            transition: background-color var(--transition);
+
+            @include hover {
+                background-color: var(--color-blue);
+            }
         }
+    }
+
+    &__controls {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 5;
+        display: flex;
+        gap: 10px;
+        align-items: center;
     }
 }
