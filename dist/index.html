@@ -34,16 +34,16 @@
   <body>
     <!--Шапка-->
     <header class="header" data-header>
-      <div class="container header__container"><a class="header__logo" href="#block-1" data-scroll aria-label="Дженерал Смета"></a>
+      <div class="container header__container"><a class="header__logo" href="#block-1" aria-label="Дженерал Смета"></a>
         <div class="header__content scrollbar-hidden" data-nav data-lenis-prevent>
           <button class="btn-reset visible-tablet header__close" type="button" data-toggle-target="[data-nav]" aria-label="Закрыть меню"></button>
           <nav class="header__nav hidden">
             <ul class="header__list">
-              <li><a class="primary-link" href="#block-5" data-scroll data-toggle-target="[data-nav]">Программа</a></li>
-              <li><a class="primary-link" href="#block-8" data-scroll data-toggle-target="[data-nav]">Обучение</a></li>
-              <li><a class="primary-link" href="#block-10" data-scroll data-toggle-target="[data-nav]">Преподаватели</a></li>
-              <li><a class="primary-link" href="#block-11" data-scroll data-toggle-target="[data-nav]">Стоимость</a></li>
-              <li><a class="primary-link" href="#block-14" data-scroll data-toggle-target="[data-nav]">FAQ</a></li>
+              <li><a class="primary-link" href="#block-5" data-toggle-target="[data-nav]">Программа</a></li>
+              <li><a class="primary-link" href="#block-8" data-toggle-target="[data-nav]">Обучение</a></li>
+              <li><a class="primary-link" href="#block-10" data-toggle-target="[data-nav]">Преподаватели</a></li>
+              <li><a class="primary-link" href="#block-11" data-toggle-target="[data-nav]">Стоимость</a></li>
+              <li><a class="primary-link" href="#block-14" data-toggle-target="[data-nav]">FAQ</a></li>
             </ul>
           </nav>
         </div>
@@ -106,7 +106,7 @@
                       <h4 class="education-formats__title">Онлайн-курс</h4><img class="education-formats__icon" src="img/education-format-3.svg" alt="Онлайн-курс" width="24" height="24" loading="lazy">
                     </div>
                     <p class="primary-lh education-formats__subtitle">видео-уроки, практические работы, тестирования 24/7</p>
-                  </section><a class="btn btn_blue-gradient education-formats__btn" href="#block-11" data-scroll> <span>Записаться на курс</span></a>
+                  </section><a class="btn btn_blue-gradient education-formats__btn" href="#block-11"> <span>Записаться на курс</span></a>
             </div>
           </section>
         </div>
@@ -1515,7 +1515,7 @@
               </div>
             </div>
             <div class="faq__item ac">
-              <button class="faq__btn btn-reset ac-trigger" type="button">При выборе варианта "Самостоятельное обучение", смогу ли я в дальнейшем доплатить до варианта "С поддержкой преподавателя"? <span class="faq__btn-icon">
+              <button class="faq__btn btn-reset ac-trigger" type="button">При выборе варианта «Самостоятельное обучение», смогу ли я в дальнейшем доплатить до варианта "С поддержкой преподавателя"? <span class="faq__btn-icon">
                   <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.04103 0.818191L9.64982 7.73182C10.1167 8.15607 10.1167 8.84393 9.64982 9.26818L2.04103 16.1818C1.57411 16.6061 0.817098 16.6061 0.350185 16.1818C-0.116728 15.7576 -0.116728 15.0697 0.350185 14.6454L7.11355 8.5L0.350185 2.35455C-0.116728 1.9303 -0.116728 1.24245 0.350185 0.818191C0.817098 0.393936 1.57411 0.393936 2.04103 0.818191Z" fill="currentColor"></path>
                   </svg></span></button>
@@ -1647,7 +1647,7 @@
       <button class="modal__close btn-reset" type="button" data-fancybox-close aria-label="Закрыть окно"></button>
       <div class="modal__content">
         <div class="modal__heading">Заявка на обратный звонок</div>
-        <div class="modal__text primary-lh">Оставите заявку, наш менеджер свяжется с вами и ответит на все ваши вопросы</div>
+        <div class="modal__text primary-lh">Оставьте заявку, наш менеджер свяжется с вами и ответит на все ваши вопросы</div>
         <!--Для показа "Спасибо" после отправки формы к .form надо добавить класс .form_sended-->
         <!--Демонстрация скрипта находится в onsubmit, на бэке это событие удалить-->
         <form class="form" action="#" method="post" novalidate onsubmit="if (this.querySelectorAll('input:user-invalid').length === 0) { this.classList.add('form_sended'); this.reset(); }; return false;">
@@ -1678,7 +1678,7 @@
       <button class="modal__close btn-reset" type="button" data-fancybox-close aria-label="Закрыть окно"></button>
       <div class="modal__content">
         <div class="modal__heading">Заявка на обучение</div>
-        <div class="modal__text primary-lh"><strong>Ваш заказ: "Профессиональная перподготовка по специальности инженер-сметчик"</strong></div>
+        <div class="modal__text primary-lh"><strong>Ваш заказ: «Профессиональная переподготовка по специальности инженер-сметчик»</strong></div>
         <!--Для показа "Спасибо" после отправки формы к .form надо добавить класс .form_sended-->
         <!--Демонстрация скрипта находится в onsubmit, на бэке это событие удалить-->
         <form class="form" action="#" method="post" novalidate data-price-closest onsubmit="if (this.querySelectorAll('input:user-invalid').length === 0) { this.classList.add('form_sended'); this.reset(); }; return false;">
@@ -1732,7 +1732,7 @@
       <button class="modal__close btn-reset" type="button" data-fancybox-close aria-label="Закрыть окно"></button>
       <div class="modal__content">
         <div class="modal__heading">Заявка на обучение</div>
-        <div class="modal__text primary-lh"><strong>Ваш заказ: "Профессиональная перподготовка по специальности инженер-сметчик"</strong></div>
+        <div class="modal__text primary-lh"><strong>Ваш заказ: «Профессиональная переподготовка по специальности инженер-сметчик»</strong></div>
         <!--Для показа "Спасибо" после отправки формы к .form надо добавить класс .form_sended-->
         <!--Демонстрация скрипта находится в onsubmit, на бэке это событие удалить-->
         <form class="form" action="#" method="post" novalidate data-price-closest onsubmit="if (this.querySelectorAll('input:user-invalid').length === 0) { this.classList.add('form_sended'); this.reset(); }; return false;">

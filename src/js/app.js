@@ -1,5 +1,5 @@
 import './modules/toggle.js';
-import './modules/lenis.js';
+import './modules/gsap.js';
 import './modules/fancybox.js';
 import './modules/tel.js';
 import './modules/privacy-policy.js';

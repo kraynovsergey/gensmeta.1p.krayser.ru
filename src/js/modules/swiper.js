@@ -9,8 +9,8 @@ function createSwiper(selector, config) {
 createSwiper('[data-swiper-resume-portfolio]', {
     modules: [Navigation, Pagination, Autoplay],
     autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
+        delay: 5000,
+        disableOnInteraction: true,
     },
     navigation: {
         nextEl: '[data-swiper-resume-portfolio-next]',
@@ -19,19 +19,6 @@ createSwiper('[data-swiper-resume-portfolio]', {
     pagination: {
         el: '[data-swiper-resume-portfolio-fraction]',
         type: 'fraction'
-    },
-    loop: true
-});
-
-createSwiper('[data-swiper-education]', {
-    modules: [Navigation, Autoplay],
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: '[data-swiper-education-next]',
-        prevEl: '[data-swiper-education-prev]'
     },
     loop: true
 });
@@ -52,8 +39,8 @@ createSwiper('[data-swiper-reviews]', {
 createSwiper('[data-swiper-letters]', {
     modules: [Navigation, Pagination, Autoplay],
     autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
+        delay: 5000,
+        disableOnInteraction: true,
     },
     navigation: {
         nextEl: '[data-swiper-letters-next]',
@@ -70,8 +57,8 @@ createSwiper('[data-swiper-letters]', {
 createSwiper('[data-swiper-why-we]', {
     modules: [Navigation, Pagination, Autoplay],
     autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
+        delay: 5000,
+        disableOnInteraction: true,
     },
     navigation: {
         nextEl: '[data-swiper-why-we-next]',
@@ -82,4 +69,18 @@ createSwiper('[data-swiper-why-we]', {
         type: 'fraction'
     },
     loop: true
+});
+
+
+createSwiper('[data-swiper-education]', {
+    modules: [Navigation, Autoplay],
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+    navigation: {
+        nextEl: '[data-swiper-education-next]',
+        prevEl: '[data-swiper-education-prev]'
+    },
+    //loop: true
 });

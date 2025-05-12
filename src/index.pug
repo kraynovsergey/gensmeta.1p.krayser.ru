@@ -36,7 +36,7 @@ html(lang="ru")
         //Шапка
         header.header(data-header)
             .container.header__container
-                a.header__logo(href="#block-1" data-scroll aria-label="Дженерал Смета")
+                a.header__logo(href="#block-1" aria-label="Дженерал Смета")
                 
                 .header__content.scrollbar-hidden(data-nav data-lenis-prevent)
                     button.btn-reset.visible-tablet.header__close(type="button" data-toggle-target="[data-nav]" aria-label="Закрыть меню")
@@ -44,15 +44,15 @@ html(lang="ru")
                     nav.header__nav.hidden
                         ul.header__list
                             li
-                                a.primary-link(href="#block-5" data-scroll data-toggle-target="[data-nav]") Программа
+                                a.primary-link(href="#block-5" data-toggle-target="[data-nav]") Программа
                             li
-                                a.primary-link(href="#block-8" data-scroll data-toggle-target="[data-nav]") Обучение
+                                a.primary-link(href="#block-8" data-toggle-target="[data-nav]") Обучение
                             li
-                                a.primary-link(href="#block-10" data-scroll data-toggle-target="[data-nav]") Преподаватели
+                                a.primary-link(href="#block-10" data-toggle-target="[data-nav]") Преподаватели
                             li
-                                a.primary-link(href="#block-11" data-scroll data-toggle-target="[data-nav]") Стоимость
+                                a.primary-link(href="#block-11" data-toggle-target="[data-nav]") Стоимость
                             li
-                                a.primary-link(href="#block-14" data-scroll data-toggle-target="[data-nav]") FAQ
+                                a.primary-link(href="#block-14" data-toggle-target="[data-nav]") FAQ
 
                 address.header__contacts
                     a.primary-link.header__phone(href="tel:+74951046564") +7 (495) 104-65-64
@@ -106,7 +106,7 @@ html(lang="ru")
                             +education-format-item('education-format-2.svg', 'Вебинар', 'дистанционное присутствие на очных занятиях в классе')
                             +education-format-item('education-format-3.svg', 'Онлайн-курс', 'видео-уроки, практические работы, тестирования 24/7')
 
-                            a.btn.btn_blue-gradient.education-formats__btn(href="#block-11" data-scroll) 
+                            a.btn.btn_blue-gradient.education-formats__btn(href="#block-11") 
                                 span Записаться на курс
                             
             //Инженер-сметчик
@@ -1252,7 +1252,7 @@ html(lang="ru")
                                     p При «Самостоятельном обучении» отсутствует проверка практических заданий. Содержание образовательной программы, объем практических работ, предоставление сметной программы и т.п. - не изменяются в меньшую или большую сторону по отношению к варианту «С поддержкой преподавателя». При выборе варианта «С поддержкой преподавателя» дополнительно Вы получаете проверку Ваших практических заданий, дипломной работы (в случае проф.переподготовки) с письменными разъяснениями выявленных ошибок, а также помощь по составлению смет, правильной эксплуатации сметных программ в рабочие дни с 9.00 до 17.30 по Москве.
 
                         .faq__item.ac
-                            button.faq__btn.btn-reset.ac-trigger(type="button") При выборе варианта "Самостоятельное обучение", смогу ли я в дальнейшем доплатить до варианта "С поддержкой преподавателя"? 
+                            button.faq__btn.btn-reset.ac-trigger(type="button") При выборе варианта «Самостоятельное обучение», смогу ли я в дальнейшем доплатить до варианта "С поддержкой преподавателя"? 
                                 span.faq__btn-icon
                                     svg(width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg")
                                         path(fill-rule="evenodd" clip-rule="evenodd" d="M2.04103 0.818191L9.64982 7.73182C10.1167 8.15607 10.1167 8.84393 9.64982 9.26818L2.04103 16.1818C1.57411 16.6061 0.817098 16.6061 0.350185 16.1818C-0.116728 15.7576 -0.116728 15.0697 0.350185 14.6454L7.11355 8.5L0.350185 2.35455C-0.116728 1.9303 -0.116728 1.24245 0.350185 0.818191C0.817098 0.393936 1.57411 0.393936 2.04103 0.818191Z" fill="currentColor")
@@ -1375,7 +1375,7 @@ html(lang="ru")
 
             .modal__content
                 .modal__heading Заявка на обратный звонок
-                .modal__text.primary-lh Оставите заявку, наш менеджер свяжется с вами и ответит на все ваши вопросы
+                .modal__text.primary-lh Оставьте заявку, наш менеджер свяжется с вами и ответит на все ваши вопросы
 
                 //Для показа "Спасибо" после отправки формы к .form надо добавить класс .form_sended
                 //Демонстрация скрипта находится в onsubmit, на бэке это событие удалить
@@ -1408,7 +1408,7 @@ html(lang="ru")
             .modal__content
                 .modal__heading Заявка на обучение
                 .modal__text.primary-lh
-                    strong Ваш заказ: "Профессиональная перподготовка по специальности инженер-сметчик"
+                    strong Ваш заказ: «Профессиональная переподготовка по специальности инженер-сметчик»
 
                 //Для показа "Спасибо" после отправки формы к .form надо добавить класс .form_sended
                 //Демонстрация скрипта находится в onsubmit, на бэке это событие удалить
@@ -1466,7 +1466,7 @@ html(lang="ru")
             .modal__content
                 .modal__heading Заявка на обучение
                 .modal__text.primary-lh
-                    strong Ваш заказ: "Профессиональная перподготовка по специальности инженер-сметчик"
+                    strong Ваш заказ: «Профессиональная переподготовка по специальности инженер-сметчик»
 
                 //Для показа "Спасибо" после отправки формы к .form надо добавить класс .form_sended
                 //Демонстрация скрипта находится в onsubmit, на бэке это событие удалить

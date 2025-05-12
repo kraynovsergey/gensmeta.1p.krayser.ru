@@ -1,28 +1,5 @@
 /* VENDORS */
 
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
-.lenis:not(.lenis-autoToggle).lenis-stopped {
-  overflow: clip;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
-}
-
-.lenis.lenis-autoToggle {
-  transition-property: overflow;
-  transition-duration: 1ms;
-  transition-behavior: allow-discrete;
-}
-
 :root {
   --f-spinner-width: 36px;
   --f-spinner-height: 36px;
@@ -2355,6 +2332,10 @@ template {
 
 /* GLOBAL */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   font-weight: normal;
@@ -2658,8 +2639,11 @@ body {
   background-color: var(--color-white);
 }
 
-.swiper__nav_white:not(:hover)::after {
+.swiper__nav_white::after {
   background-image: url("data:image/svg+xml,%3Csvg width='9' height='16' viewBox='0 0 9 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.79289 0.792893L0.428932 7.15685C0.0384083 7.54738 0.0384083 8.18054 0.428932 8.57107L6.79289 14.935C7.18342 15.3256 7.81658 15.3256 8.20711 14.935C8.59763 14.5445 8.59763 13.9113 8.20711 13.5208L2.55025 7.86396L8.20711 2.20711C8.59763 1.81658 8.59763 1.18342 8.20711 0.792893C7.81658 0.402369 7.18342 0.402369 6.79289 0.792893Z' fill='%23E01006'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 /* GLOBAL */
@@ -2821,6 +2805,7 @@ body.hide-scrollbar .header {
 
 .section {
   padding: clamp(25px, 1.9230769231px + 0.0641025641 * 100vw, 75px) 0;
+  scroll-margin: clamp(25px, 1.9230769231px + 0.0641025641 * 100vw, 75px);
 }
 
 .section_pt0 {
@@ -6096,6 +6081,11 @@ select.form__select {
     padding-right: clamp(20px, 15.3846153846px + 0.0128205128 * 100vw, 30px);
   }
 
+  .price-item__discount-tooltip-content {
+    width: 280px;
+    left: -140px;
+  }
+
   .price-item__controls-btns .btn {
     width: 100%;
   }
@@ -6168,6 +6158,13 @@ select.form__select {
 
   .swiper__nav:hover {
     background-color: #FF473D;
+  }
+
+  .swiper__nav_white:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='16' viewBox='0 0 9 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.79289 0.792893L0.428932 7.15685C0.0384083 7.54738 0.0384083 8.18054 0.428932 8.57107L6.79289 14.935C7.18342 15.3256 7.81658 15.3256 8.20711 14.935C8.59763 14.5445 8.59763 13.9113 8.20711 13.5208L2.55025 7.86396L8.20711 2.20711C8.59763 1.81658 8.59763 1.18342 8.20711 0.792893C7.81658 0.402369 7.18342 0.402369 6.79289 0.792893Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
   }
 
   .form__checkbox-label-title a:hover {
@@ -6274,6 +6271,13 @@ select.form__select {
 
   .swiper__nav:active {
     background-color: #FF473D;
+  }
+
+  .swiper__nav_white:active::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='16' viewBox='0 0 9 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.79289 0.792893L0.428932 7.15685C0.0384083 7.54738 0.0384083 8.18054 0.428932 8.57107L6.79289 14.935C7.18342 15.3256 7.81658 15.3256 8.20711 14.935C8.59763 14.5445 8.59763 13.9113 8.20711 13.5208L2.55025 7.86396L8.20711 2.20711C8.59763 1.81658 8.59763 1.18342 8.20711 0.792893C7.81658 0.402369 7.18342 0.402369 6.79289 0.792893Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
   }
 
   .form__checkbox-label-title a:active {

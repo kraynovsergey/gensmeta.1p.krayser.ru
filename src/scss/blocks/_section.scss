@@ -2,6 +2,7 @@
 
 .section {
     padding: fluid(75px, 25px) 0;
+    scroll-margin: fluid(75px, 25px);
 
     &_pt0 {
         padding-top: 0;
